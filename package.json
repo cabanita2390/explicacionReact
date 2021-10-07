@@ -36,5 +36,7 @@
     ]
   },
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/cabanita2390/explicacion-html-css.git",
+  "author": "<cabanita2390@hotmail.com>"
 }

@@ -3,22 +3,47 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body>
+    <header>
+      <ul class="navbar">
+        <li>
+          <img src="./media/logo.png" alt="imagen" class="logo" />
+        </li>
+        <li>
+          <button class="botonGenerico mainButton">Nuevo post</button>
+        </li>
+        <li>
+          <div class="buscar">
+            <input placeholder="Buscar una raza" />
+            <i class="fas fa-search botonGenerico iconoBusqueda"></i>
+          </div>
+        </li>
+        <li><button class="botonGenerico secondaryButton">Login</button></li>
+        <li><button class="botonGenerico mainButton">Registro</button></li>
+      </ul>
+    </header>
+    <main>
+      <section>
+        <h1>Razas de Perros</h1>
+        <ul class="breedCardContainer">
+          <li class="breedCard">
+            <div class="contenedorImagen">
+              <img src="./media/borderCollie.jpg" alt="Border Collie" />
+            </div>
+            <span class="breedTitle">Border Collie </span>
+          </li>
+          <li class="breedCard">
+            <div class="contenedorImagen">
+              <img src="./media/rhodesian.jpg" alt="Border Collie" />
+            </div>
+            <span class="breedTitle">Rhodesian</span>
+          </li>
+        </ul>
+      </section>
+      <section></section>
+    </main>
+    <footer></footer>
+  </body>
   );
 }
 
