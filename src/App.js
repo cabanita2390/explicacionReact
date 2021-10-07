@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import '../src/styles/App.css';
+import borderCollie from '../src/media/borderCollie.jpg'
+import rhodesian from '../src/media/rhodesian.jpg'
+import logo from '../src/media/logo.png'
 
 function App() {
   return (
-    <body>
+    <div className="App">
     <header>
-      <ul class="navbar">
+      <ul className="navbar">
         <li>
-          <img src="./media/logo.png" alt="imagen" class="logo" />
+          <img src={logo} alt="imagen" className="logo" />
         </li>
         <li>
-          <button class="botonGenerico mainButton">Nuevo post</button>
+          <button className="botonGenerico mainButton">Nuevo post</button>
         </li>
         <li>
-          <div class="buscar">
+          <div className="buscar">
             <input placeholder="Buscar una raza" />
-            <i class="fas fa-search botonGenerico iconoBusqueda"></i>
+            <i className="fas fa-search botonGenerico iconoBusqueda"></i>
           </div>
         </li>
-        <li><button class="botonGenerico secondaryButton">Login</button></li>
-        <li><button class="botonGenerico mainButton">Registro</button></li>
+        <li><button className="botonGenerico secondaryButton">Login</button></li>
+        <li><button className="botonGenerico mainButton">Registro</button></li>
       </ul>
     </header>
     <main>
@@ -28,13 +30,13 @@ function App() {
         <ul class="breedCardContainer">
           <li class="breedCard">
             <div class="contenedorImagen">
-              <img src="./media/borderCollie.jpg" alt="Border Collie" />
+              <img src={borderCollie} alt="Border Collie" />
             </div>
             <span class="breedTitle">Border Collie </span>
           </li>
           <li class="breedCard">
             <div class="contenedorImagen">
-              <img src="./media/rhodesian.jpg" alt="Border Collie" />
+              <img src={rhodesian} alt="rhodesian" />
             </div>
             <span class="breedTitle">Rhodesian</span>
           </li>
@@ -43,7 +45,7 @@ function App() {
       <section></section>
     </main>
     <footer></footer>
-  </body>
+  </div>
   );
 }
 
