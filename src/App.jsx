@@ -28,25 +28,27 @@ function App() {
       <section>
         <h1>Razas de Perros</h1>
         <ul class="breedCardContainer">
-          <li class="breedCard">
-            <div class="contenedorImagen">
-              <img src={borderCollie} alt="Border Collie" />
-            </div>
-            <span class="breedTitle">Border Collie </span>
-          </li>
-          <li class="breedCard">
-            <div class="contenedorImagen">
-              <img src={rhodesian} alt="rhodesian" />
-            </div>
-            <span class="breedTitle">Rhodesian</span>
-          </li>
+          <CardDePerros nombreRaza="Rhodesian" imagen={rhodesian}/>
+          <CardDePerros nombreRaza="Border Collie" imagen={borderCollie}/>
         </ul>
       </section>
       <section></section>
     </main>
-    <footer></footer>
+    <footer>
+    </footer>
   </div>
   );
+}
+
+function CardDePerros({nombreRaza, imagen}) {
+  return(
+    <li class="breedCard">
+            <div class="contenedorImagen">
+              <img src={imagen} alt="Border Collie" />
+            </div>
+            <span class="breedTitle">{nombreRaza}</span>
+          </li>
+  )
 }
 
 export default App;
