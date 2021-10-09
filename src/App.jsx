@@ -1,3 +1,4 @@
+import CardRazasPerros from '../src/components/CardRazasPerros'
 import '../src/styles/App.css';
 import borderCollie from '../src/media/borderCollie.jpg'
 import rhodesian from '../src/media/rhodesian.jpg'
@@ -28,8 +29,8 @@ function App() {
       <section>
         <h1>Razas de Perros</h1>
         <ul class="breedCardContainer">
-          <CardDePerros nombreRaza="Rhodesian" imagen={rhodesian}/>
-          <CardDePerros nombreRaza="Border Collie" imagen={borderCollie}/>
+          <CardRazasPerros nombreRaza="Rhodesian" imagen={rhodesian}/>
+          <CardRazasPerros nombreRaza="Border Collie" imagen={borderCollie}/>
         </ul>
       </section>
       <section></section>
@@ -40,15 +41,5 @@ function App() {
   );
 }
 
-function CardDePerros({nombreRaza, imagen}) {
-  return(
-    <li class="breedCard">
-            <div class="contenedorImagen">
-              <img src={imagen} alt="Border Collie" />
-            </div>
-            <span class="breedTitle">{nombreRaza}</span>
-          </li>
-  )
-}
 
 export default App;
